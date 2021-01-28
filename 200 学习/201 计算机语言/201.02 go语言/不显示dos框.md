@@ -1,0 +1,4 @@
+`go build -ldflags "-H windowsgui" main.go`
+
+hhhh
+
