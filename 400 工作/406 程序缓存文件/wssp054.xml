@@ -1,0 +1,59 @@
+<Request>
+    <RequestContent>
+        <Parameter>
+            <Document>
+                <RecordSet id='1'>
+                    <Master name='apca_t' node_id='1'>
+                        <Record>
+                            <Field name='apcald' value='JEE' />
+                            <Field name='apcatype' value='BX' />
+                            <Field name='apcadocno' value='PA33' />
+                            <Field name='apcasite' value='BIW' />
+                            <Field name='apcadocdt' value='2021/04/20' />
+                            <Field name='apca003' value='005150' />
+                            <Field name='apca014' value='005150' />
+                            <Field name='apca015' value='BA0103' />
+                            <Field name='apca007' value='P006' />
+                            <Field name='apca053' value='到徐州徐工施维英公司出差' />
+                            <Field name='apca050' value='5' />
+                            <Field name='apca057' value='005150' />
+                            <Field name='apca018' value='CW_bxd20210412011' />
+                            <Detail name='apcb_t' node_id='1_1'>
+                                <Record>
+                                    <Field name='apcb100' value='CNY' />
+                                    <Field name='apcb020' value='S00' />
+                                    <Field name='apcb103' value='495.94' />
+                                    <Field name='apcb104' value='0' />
+                                    <Field name='apcb105' value='495.94' />
+                                    <Field name='apcb047' value='到徐工出差' />
+                                    <Field name='apcb021' value='' />
+                                    <Field name='apcb010' value='BA0103' />
+                                    <Field name='apcb015' value='' />
+                                </Record>
+                            </Detail>
+                            <Detail name='isam_t' node_id='1_2'>
+                                <Record>
+                                    <Field name='isam008' value='20' />
+                                    <Field name='isam010' value='' />
+                                    <Field name='isam011' value='2021/04/09' />
+                                    <Field name='isam012' value='S00' />
+                                    <Field name='isam014' value='CNY' />
+                                    <Field name='isam025' value='495.94' />
+                                </Record>
+                            </Detail>
+                            <Detail name='apce_t' node_id='1_3'></Detail>
+                            <Detail name='apde_t' node_id='1_4'>
+                                <Record>
+                                    <Field name='apde008' value='E001' />
+                                    <Field name='apde100' value='CNY' />
+                                    <Field name='apde109' value='495.94' />
+                                    <Field name='apde011' value='4010' />
+                                </Record>
+                            </Detail>
+                        </Record>
+                    </Master>
+                </RecordSet>
+            </Document>
+        </Parameter>
+    </RequestContent>
+</Request>
