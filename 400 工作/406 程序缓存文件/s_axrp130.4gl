@@ -4172,6 +4172,20 @@ DEFINE l_xrca005     LIKE xrca_t.xrca005
    LET l_xrcf.xrcfent = g_enterprise
    LET l_xrcf.xrcfld  = p_ld
    LET l_xrcf.xrcforga=l_glaacomp
+   #add by lixwz210524 s---
+   #冲暂估差异，如果单身暂估单来源是同一营运中心，优先取单身营运中心
+   SELECT count(unique xrcborga ) INTO l_cnt from xrca_t 
+    where xrcadocno = p_xrcadocno and xrcaent = g_enterprise
+      AND xrcfld = p_ld
+   IF l_cnt = 1 THEN
+      SELECT unique xrcborga INTO l_xrcf.xrcforga from xrca_t 
+      where xrcadocno = p_xrcadocno and xrcaent = g_enterprise
+      AND xrcfld = p_ld
+      IF cl_null(l_xrcf.xrcforga) THEN
+         LET l_xrcf.xrcforga=l_glaacomp
+      END IF
+   END IF
+   #add by lixwz210524 e---
    LET l_xrcf.xrcfdocno=p_xrcadocno
    LET l_xrcf.xrcfseq2 = 0
    LET l_xrcf.xrcf001 = 'axrt300'
