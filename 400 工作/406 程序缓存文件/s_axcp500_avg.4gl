@@ -7736,7 +7736,7 @@ PUBLIC FUNCTION s_axcp500_avg1_def_cursor()
    LET g_sql = " SELECT UNIQUE sfaaent,sfaasite,sfaadocno,sfaadocdt,sfaa003,sfaa010,sfaa011,sfaa012, ",
                "               sfaa013,sfaa028,sfaa042,sfaa048,sfaa057,isgywwrk ",               
    #190513-00024#1 add-E               
-               "  FROM sfaa_tmp",
+               "  FROM z",
                " WHERE sfaaent = ",g_enterprise,
                "   AND EXISTS(SELECT 1 FROM s_axcp500_tmp WHERE sfaa010 = imaa001) ",
                "   AND EXISTS(SELECT 1 FROM sfac_tmp2 WHERE clevel = ? AND sfaadocno = sfacdocno) ",

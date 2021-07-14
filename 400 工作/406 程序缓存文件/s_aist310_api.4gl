@@ -460,6 +460,9 @@ DEFINE l_cnt                              LIKE type_t.num5
               LET l_invoice.invoice_class = g_base.inv_class
               LET l_invoice.comp = g_isafcomp           
               LET ls_jsin = util.JSON.stringify(l_invoice)
+              #add by lixwz s---
+              SELECT COUNT(1) INTO l_cnt FROM 
+              #add by lixwz e---
               CALL s_jscli_doapi03(ls_jsin) RETURNING ls_jsout
               CALL util.JSON.parse(ls_jsout,l_return) 
               
